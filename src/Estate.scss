@@ -1,0 +1,138 @@
+.estate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.estate_container{
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    height:140px;
+    width: 150px;
+    margin: 30px 1px; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;    
+}
+
+
+.estate_container_p{
+    font-size: small;
+    margin: 2%;
+}
+
+.estate_container_img {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    z-index: 0;    
+}
+
+.selection_order {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: rgba(0, 0, 255, 0.5); 
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+.estate_container.highlighted {
+    position: relative; 
+    box-shadow: inset 0 0 0 10px rgba(96, 180, 240, 0.5);
+    z-index: 1;
+}
+
+
+
+.selection_svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    width: 50px; 
+    height: 50px; 
+}
+
+
+
+
+.selectedEstate_p{
+    display: flex;
+    justify-content: space-between;  
+    margin: 0%;
+}
+
+.comparisonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.selectedEstate_container{
+    width: 25vw;
+    border: 1px solid black;
+    border-radius: 1%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.1%;
+}
+
+.selectedEstate_img{
+    width: 100%; 
+}
+
+.selectedEstate_logo{
+    width: 15%;
+    margin: 1%;
+}
+
+.comparisonContainer_logoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.selectedEstate_span{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.selectedEstate_p_name{
+    margin-left: 2%;
+}
+
+.estate_container.highlighted::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 10px rgba(96, 180, 240, 0.5); 
+    z-index: 1; 
+}
+
+.estate_container_img {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    z-index: 0; 
+}
+
+.selection_svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    width: 50px;
+    height: 50px;
+}
+
+.estate_container_p, .selection_order {
+    z-index: 2; 
+    position: relative;
+}
