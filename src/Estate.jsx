@@ -80,13 +80,13 @@ return (
                 
                 
                 const floorAreaStyle = selectedEstates.length === 2 ? (
-                    selectedEstates[0].building_area > selectedEstates[1].building_area ?
+                    Number(selectedEstates[0].building_area) > Number(selectedEstates[1].building_area) ?
                     (index === 0 ? { backgroundColor: 'green' } : { backgroundColor: 'red' }) :
                     (index === 0 ? { backgroundColor: 'red' } : { backgroundColor: 'green' })
                 ) : {};
                 
                 const lendAreaStyle = selectedEstates.length === 2 ? (
-                    selectedEstates[0].land_area > selectedEstates[1].land_area ?
+                    Number(selectedEstates[0].land_area) > Number(selectedEstates[1].land_area) ?
                     (index === 0 ? { backgroundColor: 'green '} : { backgroundColor: 'red'}) :
                     (index === 0 ? { backgroundColor: 'red'} : {backgroundColor: 'green'}) 
                 ) : {};
