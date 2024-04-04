@@ -7,7 +7,7 @@ export default function Estate(){
 
 const [estates,setEstates] = useState([]);
 const [selectedEstates, setSelectedEstates] = useState([]);
-const [highlightedEstateId, setHighlightedEstateId] = useState(null);
+
 
 
 
@@ -36,9 +36,7 @@ const [highlightedEstateId, setHighlightedEstateId] = useState(null);
         setHighlightedEstateId(estateData.id);
     };
 
-    function numberToLetter(number) {
-        return String.fromCharCode(64 + number);
-    }
+   
 
     
 
