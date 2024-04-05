@@ -33,10 +33,10 @@ const [selectedEstates, setSelectedEstates] = useState([]);
                 return [prevSelection[1], estateData];
             }
         });
-        setHighlightedEstateId(estateData.id);
+       
     };
 
-   
+
 
     
 
@@ -50,23 +50,23 @@ const [selectedEstates, setSelectedEstates] = useState([]);
 return (
     <>
         <div className='estate'>
-    {estates.slice(0, 10).map((estate) => (
-        <div
-            className={`estate_container ${selectedEstates.find(e => e.id === estate.id) ? 'highlighted' : ''}`}
-            onClick={() => handleClick(estate)}
-            key={estate.id}>
-            <img className="estate_container_img" src={estate.images[0]} alt={estate.name_extracted} />
-            <p className='estate_container_p'>{estate.name_extracted}{' '}{estate.locality}</p>
-            
-            {selectedEstates.findIndex((e) => e.id === estate.id) === 0 && (
-                <img src={EstateIconA} className="selection_svg" alt="A" />
-            )}
-            {selectedEstates.findIndex((e) => e.id === estate.id) === 1 && (
-                <img src={EstateIconB} className="selection_svg" alt="B" />
-            )}
-        </div>
+            {estates.slice(0, 10).map((estate) => (
+            <div
+                className={`estate_container ${selectedEstates.find(e => e.id === estate.id) ? 'highlighted' : ''}`}
+                onClick={() => handleClick(estate)}
+                key={estate.id}>
+                <img className="estate_container_img" src={estate.images[0]} alt={estate.name_extracted} />
+                <p className='estate_container_p'>{estate.name_extracted}{' '}{estate.locality}</p>
+                
+                {selectedEstates.findIndex((e) => e.id === estate.id) === 0 && (
+                    <img src={EstateIconA} className="selection_svg" alt="A" />
+                )}
+                {selectedEstates.findIndex((e) => e.id === estate.id) === 1 && (
+                    <img src={EstateIconB} className="selection_svg" alt="B" />
+                )}
+            </div>
     ))}
-</div>
+        </div>
         <div className='comparisonContainer'>
             {selectedEstates.map((estate, index) => {
                 
